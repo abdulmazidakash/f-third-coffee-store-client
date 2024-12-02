@@ -1,8 +1,10 @@
 import { stringify } from 'postcss';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const AddCoffee = () => {
+	const navigate = useNavigate();
 
 	const handleAddCoffee = e =>{
 		e.preventDefault();
@@ -33,17 +35,18 @@ const AddCoffee = () => {
 				if(data.insertedId){
 					Swal.fire({
 						title: 'Success!',
-						text: 'Do you want to continue',
-						icon: 'error',
-						confirmButtonText: 'Cool'
+						text: 'coffee added successfully',
+						icon: 'success',
+						confirmButtonText: 'Added'
 					  })
 				}
 			})
 	}
 	return (
 		<div className='lg:w-3/4 mx-auto mb-8'>
+			
             <div className="text-center p-10">
-
+			<button onClick={()=> navigate('/')} className='btn bg-gradient-to-r from-orange-800 to-zinc-800 text-center text-white mx-auto mb-8 text-2xl semi-bold'>Home</button>
                 <h1  className="text-5xl font-bold">Add Coffee!</h1>
                 <p className="py-6">
                     Provident cupiditate voluptatem et in.Quaerat fugiat ut assumenda excepturi exercitationem
