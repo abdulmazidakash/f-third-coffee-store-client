@@ -22,7 +22,7 @@ const AddCoffee = () => {
 		console.log(newCoffee);
 
 		//
-		fetch('http://localhost:5000/mango',{
+		fetch('https://third-coffee-store-server.vercel.app/mango',{
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'

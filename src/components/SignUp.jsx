@@ -25,7 +25,7 @@ const SignUp = () => {
 				const newUser = {name, email, createdAt}
 
 				//save new user to the database
-				fetch('http://localhost:5000/users', {
+				fetch('https://third-coffee-store-server.vercel.app/users', {
 					method: 'POST',
 					headers: {
 						'content-type': 'application/json'

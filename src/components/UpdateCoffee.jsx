@@ -24,7 +24,7 @@ const UpdateCoffee = () => {
 		console.log(updateCoffee);
 
 		//
-		fetch(`http://localhost:5000/mango/${_id}`,{
+		fetch(`https://third-coffee-store-server.vercel.app/mango/${_id}`,{
 			method: 'PUT',
 			headers: {
 				'content-type': 'application/json'

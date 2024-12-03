@@ -20,7 +20,7 @@ const CoffeeCard = ({coffee, coffees, setCoffees}) => {
 			if (result.isConfirmed) {
 	
 
-				fetch(`http://localhost:5000/mango/${_id}`,{
+				fetch(`https://third-coffee-store-server.vercel.app/mango/${_id}`,{
 					method: 'DELETE'
 				})
 					.then(res => res.json())
